@@ -1,0 +1,19 @@
+//Remove duplicates from an array
+
+const arr = [1, 2, 2, 3, 4, 4, 5, 3, 34, 7];
+
+const uniques = function (arr) {
+  const newS = new Set(arr);
+  const newArr = [...newS];
+
+  return newArr;
+};
+
+console.log(uniques(arr));
+
+(function (arr) {
+  const newS = new Set(arr);
+  const newArr = [...newS];
+
+  console.log(newArr);
+})(arr);

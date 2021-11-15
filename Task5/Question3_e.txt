@@ -1,0 +1,25 @@
+// Return all the palindromes in an array
+
+const arr = ["mom", "naga", "swarup", "civic", "kayak", "reviver"];
+
+const palindrome = (arr) => {
+  const newArr = [];
+
+  for (let ar of arr) {
+    let arr1 = ar.split("").reverse();
+    let arr2 = ar.split("");
+    let flag = 0;
+    for (let i = 0; i < arr2.length; i++) {
+      if (arr1[i] !== arr2[i]) {
+        flag = 1;
+      }
+    }
+    if (flag === 0) {
+      newArr.push(ar);
+    }
+  }
+
+  return newArr;
+};
+
+console.log(palindrome(arr));

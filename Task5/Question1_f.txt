@@ -1,0 +1,52 @@
+// Return median of two sorted arrays of same size
+
+const arr = [1, 2, 3, 4, 5, 6];
+const arr1 = [6, 7, 8, 9, 10];
+
+const median = function (arr, arr1) {
+  let median1 = 0;
+  let median2 = 0;
+  const arrOut = [];
+
+  if (arr.length % 2 === 0) {
+    median1 = (arr[arr.length / 2] + arr[arr.length / 2 - 1]) / 2;
+  } else {
+    median1 = arr[(arr.length - 1) / 2];
+  }
+
+  if (arr1.length % 2 === 0) {
+    median2 = (arr1[arr1.length / 2] + arr1[arr1.length / 2 - 1]) / 2;
+  } else {
+    median2 = arr1[(arr1.length - 1) / 2];
+  }
+
+  arrOut.push(median1);
+  arrOut.push(median2);
+
+  return arrOut;
+};
+
+console.log(median(arr, arr1).join("\n"));
+
+(function (arr, arr1) {
+  let median1 = 0;
+  let median2 = 0;
+  const arrOut = [];
+
+  if (arr.length % 2 === 0) {
+    median1 = (arr[arr.length / 2] + arr[arr.length / 2 - 1]) / 2;
+  } else {
+    median1 = arr[(arr.length - 1) / 2];
+  }
+
+  if (arr1.length % 2 === 0) {
+    median2 = (arr1[arr1.length / 2] + arr1[arr1.length / 2 - 1]) / 2;
+  } else {
+    median2 = arr1[(arr1.length - 1) / 2];
+  }
+
+  arrOut.push(median1);
+  arrOut.push(median2);
+
+  console.log(arrOut.join("\n"));
+})(arr, arr1);

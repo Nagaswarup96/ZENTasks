@@ -1,0 +1,13 @@
+// Convert all the strings to title caps in a string array
+const arr = ["naga", "swarup", "nidhi", "naveen", "gokul"];
+
+const title = (arr) => {
+  const arr1 = arr.map((ar) => {
+    let newArr = ar.split("");
+    newArr[0] = newArr[0].toUpperCase();
+    return newArr.join("");
+  });
+  return arr1;
+};
+
+console.log(title(arr));

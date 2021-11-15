@@ -1,0 +1,11 @@
+// Print odd numbers in an array
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+const odd = (arr) => {
+  const oddArr = arr.filter((ar) => ar % 2 !== 0);
+
+  return oddArr;
+};
+
+console.log(odd(arr));

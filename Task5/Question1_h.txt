@@ -1,0 +1,29 @@
+//Rotate an array by k times
+
+const arr = [9, 7, 6, 8, 5, 3, 4, 2, 1];
+
+const rotateValue = 5;
+
+const rotateFunc = function (arr, val) {
+  let temp = 0;
+
+  for (let i = 0; i < val; i++) {
+    temp = arr.pop();
+    arr.unshift(temp);
+  }
+
+  return arr;
+};
+
+console.log(rotateFunc(arr, rotateValue));
+
+(function (arr, val) {
+  let temp = 0;
+
+  for (let i = 0; i < val; i++) {
+    temp = arr.pop();
+    arr.unshift(temp);
+  }
+
+  console.log(arr);
+})(arr);

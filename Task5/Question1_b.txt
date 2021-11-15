@@ -1,0 +1,21 @@
+const arr = ["naga", "swarup", "nidhi", "naveen", "gokul"];
+
+const title = function (arr) {
+  const arr1 = arr.map((ar) => {
+    let newArr = ar.split("");
+    newArr[0] = newArr[0].toUpperCase();
+    return newArr.join("");
+  });
+  return arr1;
+};
+
+console.log(title(arr));
+
+(function (arr) {
+  const arr1 = arr.map((ar) => {
+    let newArr = ar.split("");
+    newArr[0] = newArr[0].toUpperCase();
+    return newArr.join("");
+  });
+  console.log(title(arr1));
+})(arr);
