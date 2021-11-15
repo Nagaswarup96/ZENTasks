@@ -1,0 +1,23 @@
+//Program to display flags of all countries
+
+var xhr = new XMLHttpRequest();
+
+xhr.open("GET", "https://restcountries.com/v2/all");
+
+xhr.onload = function () {
+
+  if (xhr.status >= 200 && xhr.status < 300) {
+
+    let users = JSON.parse(this.response);
+
+    for (let user of users) {
+      console.log(`
+        Flag : ${user.flag}
+        `);
+    }
+  } else {
+    console.log("No data");
+  }
+};
+
+xhr.send();

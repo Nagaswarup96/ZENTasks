@@ -1,0 +1,1 @@
+Two JSON objects without order can be compared using Lodash .isEqual() method.
