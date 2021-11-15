@@ -1,0 +1,23 @@
+// Print the total population of countries using reduce function
+
+var xhr = new XMLHttpRequest();
+
+// "https://raw.githubusercontent.com/rvsp/restcountries-json-data/master/res-countries.json"
+
+xhr.open("GET", "https://restcountries.com/v2/all");
+
+xhr.onload = function () {
+  if (xhr.status >= 200 && xhr.status < 300) {
+    let users = JSON.parse(this.response);
+
+    const totalPopulation = users
+      .map((user) => user.population)
+      .reduce((a, b) => a + b);
+
+    console.log(`Population : ${totalPopulation}`);
+  } else {
+    console.log("No data");
+  }
+};
+
+xhr.send();
