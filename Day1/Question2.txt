@@ -1,0 +1,9 @@
+Write a blog on Difference between HTTP1.1 vs HTTP2
+
+
+HTTP/2 is developed with the intention of reducing web page load latency by using techniques such as compression, multiplexing, and prioritization.
+HTTP/1.1 keeps all requests nad responses in plain text format, HTTP/2 uses the binary farming layer to encapsulate all messages in binary format.
+But still maintains HTTP semantics, such as verbs, methods and headers. An appllication level API would still create messages in the conventional HTTP formats,
+but the underlying layer would then convert these messages into binary.HTTP/1.1 allows persistent connections and pipelining, that it assumes that a TCP connection should be kept 
+open unless directly told to close. HTTP/2 binary farming layer encodes requests/responses and cuts them up into smaller packets of information, greatly increasing the 
+flexibility of data transfer.
