@@ -1,0 +1,37 @@
+.pagination {
+  border: solid 1px #000;
+  padding: 8px 6px;
+  overflow: scroll;
+}
+
+.pagination a {
+  border-right: solid 1px gray;
+  color: black;
+  padding: 8px 6px;
+  text-decoration: none;
+  margin: 5px 0 0;
+  cursor: pointer;
+}
+
+.pagination a:hover {
+  background-color: rgb(156, 156, 156);
+}
+
+.mainDiv {
+  border: solid 2px rgb(177, 250, 155);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 100px;
+  min-height: 50vh;
+  text-align: center;
+}
+
+#name {
+  color: rgb(79, 139, 141);
+}
+
+#email {
+  color: rgb(211, 64, 11);
+}
